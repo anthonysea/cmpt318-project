@@ -1,0 +1,53 @@
+[0m[0K]0;:/c/Users/Anthony/Documents/R/projects and scripts/cmpt318_project[?25l
+[0;32mAnthony@LAPTOP-41AO11CF [0;35m [0;33m~/Documents/R/projects and scripts/cmpt318_project[0m[0K
+$[0K[3G[?25h[?25l$ l[0K[?25hs[0K[?25l
+[0K[?25hcmpt318_project.Rproj  main.r  train_data.txt[0K[?25l
+[0K[?25h[?25l
+[0;32mAnthony@LAPTOP-41AO11CF [0;35m [0;33m~/Documents/R/projects and scripts/cmpt318_project[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git i[0K[?25hn[0Ki[0K[?25l$ git in[0K[?25h[?25l$ git i[0K[?25h[?25l$ git[0K[7G[?25h[6G[?25l$ gi[0K[6G[?25h[5G[?25l$ g[0K[?25h[?25l$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git i[0K[?25hn[0Kti[0K[?25l
+[0K[?25hgit: 'inti' is not a git command. See 'git --help'.[0K[?25l
+[0K
+The most similar command is[0K
+        init[0K
+[0K[?25h[?25l
+[0;32mAnthony@LAPTOP-41AO11CF [0;35m [0;33m~/Documents/R/projects and scripts/cmpt318_project[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git i[0K[?25hn[0Ki[0Kt[0K[?25l
+[0K[?25hInitialized empty Git repository in C:/Users/Anthony/Documents/R/projects and scripts/cmpt318_project/.git/[0K[?25l
+[0K[?25h[?25l
+[0;32mAnthony@LAPTOP-41AO11CF [0;35m [0;33m~/Documents/R/projects and scripts/cmpt318_project[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0K[6G[5G[?25l$ git[0K[?25h[7G[?25l$ git s[0K[?25ht[0Ka[0Kt[0Ku[0Ks[0K[?25l
+[0K[?25hOn branch master[0K[?25l
+[0K
+No commits yet[0K
+[0K
+Untracked files:[0K
+  (use "git add <file>..." to include in what will be committed)[0K
+[0K
+        [0;31m.Rproj.user/[0m[0K
+        [0;31mcmpt318_project.Rproj[0m[0K
+        [0;31mmain.r[0m[0K
+        [0;31mtrain_data.txt[0m[0K
+[0K
+nothing added to commit but untracked files present (use "git add" to track)[0K
+[0K[?25h[?25l
+[0;32mAnthony@LAPTOP-41AO11CF [0;35m [0;33m~/Documents/R/projects and scripts/cmpt318_project[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[?25l$ git ad[0K[10G[?25h[9G[?25l$ git a[0K[?25h[?25l$ git[0K[7G[?25h[6G[?25l$ g[0K[?25h[?25l$[0K[3G[?25h[?25l$ e[0K[?25hc[0Kh[0Ko[0K[8G[?25l$ echo "[0K[?25h*[0K.[0Kr[0K[?25l$ echo "*.[0K[?25hR[0Kp[0Kr[0Ko[0Kj[0K"[0K[18G[?25l$ echo "*.Rproj" >[0K[?25h[20G[?25l$ echo "*.Rproj" > .[0K[?25hg[0Ki[0Kt[0Ki[0Kt[0K[?25l$ echo "*.Rproj" > .giti[0K[?25h[?25l$ echo "*.Rproj" > .git[0K[?25h[?25l$ echo "*.Rproj" > .gi[0K[?25h[?25l$ echo "*.Rproj" > .g[0K[?25h[?25l$ echo "*.Rproj" > .[0K[?25h[?25l$ echo "*.Rproj" >[0K[20G[?25h[19G[?25l$ echo "*.Rproj" >>[0K[?25h[21G[?25l$ echo "*.Rproj" >> .[0K[?25hg[0Ki[0Kt[0Ki[0Kg[0Kn[0Ko[0Kr[0Ke[0K[?25l
+[0K[?25h[?25l
+[0;32mAnthony@LAPTOP-41AO11CF [0;35m [0;33m~/Documents/R/projects and scripts/cmpt318_project[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ l[0K[?25h[?25l$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git s[0K[?25ht[0Ka[0Kt[0Ku[0Ks[0K[?25l
+[0K[?25hOn branch master[0K[?25l
+[0K
+No commits yet[0K
+[0K
+Untracked files:[0K
+  (use "git add <file>..." to include in what will be committed)[0K
+[0K
+        [0;31m.Rproj.user/[0m[0K
+        [0;31m.gitignore[0m[0K
+        [0;31mmain.r[0m[0K
+        [0;31mtrain_data.txt[0m[0K
+[0K
+nothing added to commit but untracked files present (use "git add" to track)[0K
+[0K[?25h[?25l
+[0;32mAnthony@LAPTOP-41AO11CF [0;35m [0;33m~/Documents/R/projects and scripts/cmpt318_project[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h
