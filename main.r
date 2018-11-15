@@ -62,7 +62,15 @@ christmas.nights <- christmas[hour(hms(christmas$Time)) >= 0 & hour(hms(christma
 christmas.mornings <- christmas[hour(hms(christmas$Time)) >= 6 & hour(hms(christmas$Time)) < 12,]
 christmas.afternoons <- christmas[hour(hms(christmas$Time)) >= 12 & hour(hms(christmas$Time)) < 18,]
 
+thanksgiving.evenings <- thanksgiving[hour(hms(thanksgiving$Time)) >= 18 & hour(hms(thanksgiving$Time)) < 24,]
+thanksgiving.nights <- thanksgiving[hour(hms(thanksgiving$Time)) >= 0 & hour(hms(thanksgiving$Time)) < 6,]
+thanksgiving.mornings <- thanksgiving[hour(hms(thanksgiving$Time)) >= 6 & hour(hms(thanksgiving$Time)) < 12,]
+thanksgiving.afternoons <- thanksgiving[hour(hms(thanksgiving$Time)) >= 12 & hour(hms(thanksgiving$Time)) < 18,]
 
+black_friday.evenings <- black_friday[hour(hms(black_friday$Time)) >= 18 & hour(hms(black_friday$Time)) < 24,]
+black_friday.nights <- black_friday[hour(hms(black_friday$Time)) >= 0 & hour(hms(black_friday$Time)) < 6,]
+black_friday.mornings <- black_friday[hour(hms(black_friday$Time)) >= 6 & hour(hms(black_friday$Time)) < 12,]
+black_friday.afternoons <- black_friday[hour(hms(black_friday$Time)) >= 12 & hour(hms(black_friday$Time)) < 18,]
 
 
 

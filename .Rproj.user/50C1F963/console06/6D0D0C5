@@ -201,4 +201,78 @@ Changes not staged for commit:[0K
 no changes added to commit (use "git add" and/or "git commit -a")[0K
 [0K[?25h[?25l
 [0;32mAnthony@LAPTOP-41AO11CF [0;35m [0;33m~/Documents/R/projects and scripts/cmpt318_project[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25h[?25ld[0K[8G[?25h[9G[?25l$ git add[0K[?25h[11G[?25l$ git add .[0K[?25h
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25h[?25ld[0K[8G[?25h[9G[?25l$ git add[0K[?25h[11G[?25l$ git add .[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/50C1F963/sources/prop/1AD85F56.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .gitignore.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25h[?25l
+[0;32mAnthony@LAPTOP-41AO11CF [0;35m [0;33m~/Documents/R/projects and scripts/cmpt318_project[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25hs[0Ku[0Kb[0Ks[0Ke[0Kt[0K[?25lt[0K[24G[?25h[25G[?25l$ git commit -m "subsetti[0K[?25hn[0Kg[0K[29G[?25l$ git commit -m "subsetting d[0K[?25ha[0Kt[0Ka[0K[34G[?25l$ git commit -m "subsetting data i[0K[?25hn[0Kt[0Ko[0K[39G[?25l$ git commit -m "subsetting data into t[0K[?25hi[0Km[0Ke[0K[44G[?25l$ git commit -m "subsetting data into time w[0K[?25hi[0Kn[0Kd[0Ko[0Kw[0Ks[0K[52G[?25l$ git commit -m "subsetting data into time windows a[0K[?25hn[0Kd[0K[?25l$ git commit -m "subsetting data into time windows an[0K[?25h[?25l$ git commit -m "subsetting data into time windows a[0K[?25h[?25l$ git commit -m "subsetting data into time windows[0K[52G[?25h[51G[52G[?25l$ git commit -m "subsetting data into time windows a[0K[?25hn[0K[?25ld[0K[54G[?25h[55G[56G[?25l$ git commit -m "subsetting data into time windows and d[0K[?25ha[0Kt[0Ke[0K[61G[?25l$ git commit -m "subsetting data into time windows and date i[0K[?25hn[0Kt[0K[?25le[0K[64G[?25h[65G[?25l$ git commit -m "subsetting data into time windows and date inter[0K[?25hv[0Ka[0Kl[0Ks[0K"[0K[?25l
+[0K[?25h[master 6c536be] subsetting data into time windows and date intervals[0K[?25l
+ 12 files changed, 199 insertions(+), 295 deletions(-)[0K
+ delete mode 100644 .Rproj.user/50C1F963/sources/s-5EDD0072/3ECBAF19[0K
+ delete mode 100644 .Rproj.user/50C1F963/sources/s-5EDD0072/3ECBAF19-contents[0K
+ delete mode 100644 .Rproj.user/50C1F963/sources/s-5EDD0072/88884CF0-contents[0K
+ delete mode 100644 .Rproj.user/50C1F963/sources/s-5EDD0072/D4776487-contents[0K
+ delete mode 100644 .Rproj.user/50C1F963/sources/s-5EDD0072/E5B04EEA[0K
+ delete mode 100644 .Rproj.user/50C1F963/sources/s-5EDD0072/E5B04EEA-contents[0K
+ delete mode 100644 .Rproj.user/50C1F963/sources/s-5EDD0072/lock_file[0K
+[0K[?25h[?25l
+[0;32mAnthony@LAPTOP-41AO11CF [0;35m [0;33m~/Documents/R/projects and scripts/cmpt318_project[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25h[?25lu[0K[8G[?25h[9G[?25l$ git pus[0K[?25hh[0K[?25l
+[0K[?25hCounting objects: 12, done.[0K[?25l
+Delta compression using up to 4 threads.[0K
+Compressing objects: 100% (10/10), done.[0K
+Writing objects: 100% (12/12), 4.05 KiB | 592.00 KiB/s, done.[0K
+Total 12 (delta 1), reused 0 (delta 0)[0K
+[0K[?25hremote: Resolving deltas: 100% (1/1), completed with 1 local object.[0K[?25l
+[0K[?25h[?25lTo https://github.com/anthonysea/cmpt318-project.git[0K[2G[?25h[?25l
+   24ebf20..6c536be  master -> master[0K
+[0K[?25h[?25l
+[0;32mAnthony@LAPTOP-41AO11CF [0;35m [0;33m~/Documents/R/projects and scripts/cmpt318_project[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git s[0K[?25h[?25lt[0K[8G[?25h[9G[?25l$ git sta[0K[?25ht[0Ku[0Ks[0K[?25l
+[0K[?25hOn branch master[0K[?25l
+Your branch is up to date with 'origin/master'.[0K
+[0K
+Changes not staged for commit:[0K
+  (use "git add <file>..." to update what will be committed)[0K
+  (use "git checkout -- <file>..." to discard changes in working directory)[0K
+[0K
+        [0;31mmodified:   .Rproj.user/50C1F963/console06/6D0D0C5[0m[0K
+        [0;31mmodified:   .Rproj.user/50C1F963/sources/prop/1AD85F56[0m[0K
+        [0;31mmodified:   main.r[0m[0K
+[0K
+no changes added to commit (use "git add" and/or "git commit -a")[0K
+[0K[?25h[?25l
+[0;32mAnthony@LAPTOP-41AO11CF [0;35m [0;33m~/Documents/R/projects and scripts/cmpt318_project[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[?25l$ git ad[0K[?25h[?25l$ git a[0K[9G[?25h[8G[?25l$ git[0K[7G[?25h[6G[?25l$ gi[0K[?25h[?25l$ g[0K[5G[?25h[4G[?25l$[0K[3G[?25h[?25l$ c[0K[?25ha[0Kt[0K[7G[?25l$ cat .[0K[?25hg[0Ki[0Kt[0Ki[0Kg[0Kn[0Ko[0Kr[0Ke[0K[?25l
+[0K[?25h*.Rproj[0K[?25l
+.Rproj.user[0K
+[0K[?25h[?25l
+[0;32mAnthony@LAPTOP-41AO11CF [0;35m [0;33m~/Documents/R/projects and scripts/cmpt318_project[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[6G[?25l$ gi[0K[?25h[?25l$ g[0K[?25h[?25l$[0K[3G[?25h[?25l$ a[0K[?25hd[0Kd[0K[7G[?25l$ add .[0K[?25h[?25l$ add[0K[7G[?25h[6G[?25l$ ad[0K[?25h[?25l$ a[0K[5G[?25h[4G[?25l$[0K[3G[?25h[?25l$ e[0K[?25hc[0Kh[0Ko[0K[8G[?25l$ echo "[0K[?25h.[0KR[0K[?25lp[0K[11G[?25h[12G[?25l$ echo ".Rpr[0K[?25ho[0Kj[0K.[0Ku[0Ks[0Ke[0Kr[0K/[0K"[0K[23G[?25l$ echo ".Rproj.user/" >[0K[?25h>[0K[26G[?25l$ echo ".Rproj.user/" >> .[0K[?25hg[0Ki[0Kt[0Ki[0Kg[0Kn[0Ko[0Kr[0Ke[0K[?25l
+[0K[?25h[?25l
+[0;32mAnthony@LAPTOP-41AO11CF [0;35m [0;33m~/Documents/R/projects and scripts/cmpt318_project[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ c[0K[?25ha[0Kt[0K[7G[?25l$ cat g[0K[?25h.[0K[?25l$ cat g[0K[?25h[?25l$ cat[0K[7G[?25h[?25l$ cat .[0K[?25h[?25lg[0K[8G[?25h[9G[?25l$ cat .gi[0K[?25ht[0Ki[0Kg[0Kn[0Ko[0Kr[0Ke[0K[?25l
+[0K[?25h*.Rproj[0K[?25l
+.Rproj.user[0K
+.Rproj.user/[0K
+[0K[?25h[?25l
+[0;32mAnthony@LAPTOP-41AO11CF [0;35m [0;33m~/Documents/R/projects and scripts/cmpt318_project[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git s[0K[?25ht[0Ka[0Kt[0Ku[0Ks[0K[?25l
+[0K[?25hOn branch master[0K[?25l
+Your branch is up to date with 'origin/master'.[0K
+[0K
+Changes not staged for commit:[0K
+  (use "git add <file>..." to update what will be committed)[0K
+  (use "git checkout -- <file>..." to discard changes in working directory)[0K
+[0K
+        [0;31mmodified:   .Rproj.user/50C1F963/console06/6D0D0C5[0m[0K
+        [0;31mmodified:   .Rproj.user/50C1F963/sources/prop/1AD85F56[0m[0K
+        [0;31mmodified:   .gitignore[0m[0K
+        [0;31mmodified:   main.r[0m[0K
+[0K
+no changes added to commit (use "git add" and/or "git commit -a")[0K
+[0K[?25h[?25l
+[0;32mAnthony@LAPTOP-41AO11CF [0;35m [0;33m~/Documents/R/projects and scripts/cmpt318_project[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h
