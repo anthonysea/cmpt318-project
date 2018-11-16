@@ -26,6 +26,11 @@ spring <- subset(train, month(train$Date) %in% c(3, 4, 5))
 summer <- subset(train, month(train$Date) %in% c(6, 7, 8))
 fall <- subset(train, month(train$Date) %in% c(9, 10, 11))
 
+#Exclude Christmas, Thanksgivings and Black Friday
+winter <- subset(winter, ! winter$Date %in% date(c("2007-11-22", "2008-11-27", "2009-11-26",
+                                           "2007-11-23", "2008-11-28", "2009-11-27",
+                                            "2007-12-25", "2008-12-25", "2009-12-25")))
+
 # Create time windows
 weekdays.evenings <- weekdays[hour(hms(weekdays$Time)) >= 18 & hour(hms(weekdays$Time)) < 24,]
 weekdays.nights <- weekdays[hour(hms(weekdays$Time)) >= 0 & hour(hms(weekdays$Time)) < 6, ]
@@ -73,6 +78,43 @@ black_friday.mornings <- black_friday[hour(hms(black_friday$Time)) >= 6 & hour(h
 black_friday.afternoons <- black_friday[hour(hms(black_friday$Time)) >= 12 & hour(hms(black_friday$Time)) < 18,]
 
 
+# Intersection of time windows
+summer.weekday.evenings <- summer.evenings[summer.evenings$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"),]
+summer.weekday.nights <- summer.nights[summer.nights$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"),]
+summer.weekday.mornings <- summer.mornings[summer.mornings$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"),]
+summer.weekday.afternoons <- summer.mornings[summer.mornings$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"),]
 
+summer.weekend.evenings <- summer.evenings[summer.evenings$Day_of_week %in% c("Saturday", "Sunday"),]
+summer.weekend.nights <- summer.nights[summer.evenings$Day_of_week %in% c("Saturday", "Sunday"),]
+summer.weekend.mornings <- summer.mornings[summer.evenings$Day_of_week %in% c("Saturday", "Sunday"),]
+summer.weekend.afternoons <- summer.afternoons[summer.evenings$Day_of_week %in% c("Saturday", "Sunday"),]
 
+fall.weekday.evenings <- fall.evenings[fall.evenings$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"),]
+fall.weekday.nights <- fall.nights[fall.nights$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"),]
+fall.weekday.mornings <- fall.mornings[fall.mornings$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"),]
+fall.weekday.afternoons <- fall.afternoons[fall.afternoons$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"),]
 
+fall.weekend.evenings <- fall.evenings[fall.evenings$Day_of_week %in% c("Saturday", "Sunday"),]
+fall.weekend.nights <- fall.nights[fall.nights$Day_of_week %in% c("Saturday", "Sunday"),]
+fall.weekend.mornings <- fall.mornings[fall.mornings$Day_of_week %in% c("Saturday", "Sunday"),]
+fall.weekend.afternoons <- fall.afternoons[fall.afternoons$Day_of_week %in% c("Saturday", "Sunday"),]
+
+winter.weekday.evenings <- winter.evenings[winter.evenings$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"),] 
+winter.weekday.nights <- winter.nights[winter.nights$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"),]
+winter.weekday.mornings <- winter.mornings[winter.mornings$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"),]
+winter.weekday.afternoons <- winter.afternoons[winter.afternoons$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"),]
+
+winter.weekend.evenings <- winter.evenings[winter.evenings$Day_of_week %in% c("Saturday", "Sunday"),]
+winter.weekend.nights <- winter.nights[winter.nights$Day_of_week %in% c("Saturday", "Sunday"),]
+winter.weekend.mornings <- winter.mornings[winter.mornings$Day_of_week %in% c("Saturday", "Sunday"),]
+winter.weekend.afternoons <- winter.afternoons[winter.afternoons$Day_of_week %in% c("Saturday", "Sunday"),]
+
+spring.weekday.evenings <- spring.evenings[spring.evenings$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"),]
+spring.weekday.nights <- spring.nights[spring.nights$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"),]
+spring.weekday.mornings <- spring.mornings[spring.mornings$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"),]
+spring.weekday.afternoons <- spring.afternoons[spring.afternoons$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"),]
+
+spring.weekend.evenings <- spring.evenings[spring.evenings$Day_of_week %in% c("Saturday", "Sunday"),]
+spring.weekend.nights <- spring.nights[spring.nights$Day_of_week %in% c("Saturday", "Sunday"),]
+spring.weekend.mornings <- spring.mornings[spring.mornings$Day_of_week %in% c("Saturday", "Sunday"),]
+spring.weekend.afternoons <- spring.afternoons[spring.afternoons$Day_of_week %in% c("Saturday", "Sunday"),]
