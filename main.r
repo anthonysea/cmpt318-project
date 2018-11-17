@@ -19,6 +19,7 @@ train <- train[rowSums(is.na(train)) == 0,]
 # Create specific date intervals
 christmas <- train[month(train$Date) == 12 & day(train$Date) == 25,]
 halloween <- train[month(train$Date) == 10 & day(train$Date) == 31,]
+july4th <- train[month(train$Date) == 7 & day(train$Date) == 4,]
 
 winter <- subset(train, month(train$Date) %in% c(12, 1, 2))
 spring <- subset(train, month(train$Date) %in% c(3, 4, 5))
@@ -27,7 +28,7 @@ fall <- subset(train, month(train$Date) %in% c(9, 10, 11))
 
 # Create time windows
 ## Summer time windows
-summer.weekdays <- subset(summer, summer$Day_of_week %in% c("Monday, Tuesday", "Wednesday", "Thursday", "Friday"))
+summer.weekdays <- subset(summer, summer$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"))
 summer.weekends <- subset(summer, summer$Day_of_week %in% c("Saturday", "Sunday"))
 
 summer.weekdays.evenings <- summer.weekdays[hour(hms(summer.weekdays$Time)) >= 18 & hour(hms(summer.weekdays$Time)) < 24,]
@@ -42,7 +43,7 @@ summer.weekends.afternoons <- summer.weekends[hour(hms(summer.weekends$Time)) >=
 
 
 ## Fall time windows
-fall.weekdays <- subset(fall, fall$Day_of_week %in% c("Monday, Tuesday", "Wednesday", "Thursday", "Friday"))
+fall.weekdays <- subset(fall, fall$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"))
 fall.weekends <- subset(fall, fall$Day_of_week %in% c("Saturday", "Sunday"))
 
 fall.weekdays.evenings <- fall.weekdays[hour(hms(fall.weekdays$Time)) >= 18 & hour(hms(fall.weekdays$Time)) < 24,]
@@ -55,7 +56,8 @@ fall.weekends.nights <- fall.weekends[hour(hms(fall.weekends$Time)) >= 0 & hour(
 fall.weekends.mornings <- fall.weekends[hour(hms(fall.weekends$Time)) >= 6 & hour(hms(fall.weekends$Time)) < 12,]
 fall.weekends.afternoons <- fall.weekends[hour(hms(fall.weekends$Time)) >= 12 & hour(hms(fall.weekends$Time)) < 18,]
 
-winter.weekdays <- subset(winter, winter$Day_of_week %in% c("Monday, Tuesday", "Wednesday", "Thursday", "Friday"))
+## Winter time windows
+winter.weekdays <- subset(winter, winter$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"))
 winter.weekends <- subset(winter, winter$Day_of_week %in% c("Saturday", "Sunday"))
 
 winter.weekdays.evenings <- winter.weekdays[hour(hms(winter.weekdays$Time)) >= 18 & hour(hms(winter.weekdays$Time)) < 24,]
@@ -68,7 +70,9 @@ winter.weekends.nights <- winter.weekends[hour(hms(winter.weekends$Time)) >= 0 &
 winter.weekends.mornings <- winter.weekends[hour(hms(winter.weekends$Time)) >= 6 & hour(hms(winter.weekends$Time)) < 12,]
 winter.weekends.afternoons <- winter.weekends[hour(hms(winter.weekends$Time)) >= 12 & hour(hms(winter.weekends$Time)) < 18,]
 
-spring.weekdays <- subset(spring, spring$Day_of_week %in% c("Monday, Tuesday", "Wednesday", "Thursday", "Friday"))
+
+## Spring time windows
+spring.weekdays <- subset(spring, spring$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"))
 spring.weekends <- subset(spring, spring$Day_of_week %in% c("Saturday", "Sunday"))
 
 spring.weekdays.evenings <- spring.weekdays[hour(hms(spring.weekdays$Time)) >= 18 & hour(hms(spring.weekdays$Time)) < 24,]
@@ -81,9 +85,15 @@ spring.weekends.nights <- spring.weekends[hour(hms(spring.weekends$Time)) >= 0 &
 spring.weekends.mornings <- spring.weekends[hour(hms(spring.weekends$Time)) >= 6 & hour(hms(spring.weekends$Time)) < 12,]
 spring.weekends.afternoons <- spring.weekends[hour(hms(spring.weekends$Time)) >= 12 & hour(hms(spring.weekends$Time)) < 18,]
 
-
+## Christmas time windows
 christmas.evenings <- christmas[hour(hms(christmas$Time)) >= 18 & hour(hms(christmas$Time)) < 24,]
 christmas.nights <- christmas[hour(hms(christmas$Time)) >= 0 & hour(hms(christmas$Time)) < 6,]
 christmas.mornings <- christmas[hour(hms(christmas$Time)) >= 6 & hour(hms(christmas$Time)) < 12,]
 christmas.afternoons <- christmas[hour(hms(christmas$Time)) >= 12 & hour(hms(christmas$Time)) < 18,]
+
+## Halloween time windows
+halloween.evenings <- halloween[hour(hms(halloween$Time)) >= 18 & hour(hms(halloween$Time)) < 24,]
+halloween.nights <- halloween[hour(hms(halloween$Time)) >= 0 & hour(hms(halloween$Time)) < 6,]
+halloween.mornings <- halloween[hour(hms(halloween$Time)) >= 6 & hour(hms(halloween$Time)) < 12,]
+halloween.afternoons <- halloween[hour(hms(halloween$Time)) >= 12 & hour(hms(halloween$Time)) < 18,]
 
