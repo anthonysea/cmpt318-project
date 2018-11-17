@@ -1,5 +1,9 @@
 train <- read.csv("train_data.txt")
 library(lubridate)
+library(depmixS4)
+library(ggplot2)
+library(zoo)
+
 set.seed(1)
 
 ### Training Data Preprocessing
