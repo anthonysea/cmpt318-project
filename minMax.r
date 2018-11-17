@@ -1,27 +1,14 @@
-##Test file for testing data sets
+##  Test file for testing data sets
 library(lubridate)
 library(depmixS4)
 library(ggplot2)
 library(zoo)
 set.seed(1)
 
-##Phase 2 approach 1
-##Out of Range
+##  Phase 2 approach 1
+##  Out of Range
 
-#CHRISTMAS
-min.christmas.afternoons <- min(christmas.afternoons$Global_active_power, na.rm=T)
-max.christmas.afternoons <- max(christmas.afternoons$Global_active_power, na.rm=T)
-
-min.christmas.mornings <- min(christmas.mornings$Global_active_power, na.rm=T)
-max.christmas.mornings <- max(christmas.mornings$Global_active_power, na.rm=T)
-
-min.christmas.evenings <- min(christmas.evenings$Global_active_power, na.rm=T)
-max.christmas.evenings <- max(christmas.evenings$Global_active_power, na.rm=T)
-
-min.christmas.nights <- min(christmas.nights$Global_active_power, na.rm=T)
-max.christmas.nights <- max(christmas.nights$Global_active_power, na.rm=T)
-
-#fall.weekdays
+# fall.weekdays
 min.fall.weekdays.afternoons <- min(fall.weekdays.afternoons$Global_active_power, na.rm=T)
 max.fall.weekdays.afternoons <- max(fall.weekdays.afternoons$Global_active_power, na.rm=T)
 
@@ -34,7 +21,7 @@ max.fall.weekdays.evenings <- max(fall.weekdays.evenings$Global_active_power, na
 min.fall.weekdays.nights <- min(fall.weekdays.nights$Global_active_power, na.rm=T)
 max.fall.weekdays.nights <- max(fall.weekdays.nights$Global_active_power, na.rm=T)
 
-#fall.weekends
+# fall.weekends
 min.fall.weekends.afternoons <- min(fall.weekends.afternoons$Global_active_power, na.rm=T)
 max.fall.weekends.afternoons <- max(fall.weekends.afternoons$Global_active_power, na.rm=T)
 
@@ -47,7 +34,7 @@ max.fall.weekends.evenings <- max(fall.weekends.evenings$Global_active_power, na
 min.fall.weekends.nights <- min(fall.weekends.nights$Global_active_power, na.rm=T)
 max.fall.weekends.nights <- max(fall.weekends.nights$Global_active_power, na.rm=T)
 
-#spring.weekdays
+# spring.weekdays
 min.spring.weekdays.afternoons <- min(spring.weekdays.afternoons$Global_active_power, na.rm=T)
 max.spring.weekdays.afternoons <- max(spring.weekdays.afternoons$Global_active_power, na.rm=T)
 
@@ -60,7 +47,7 @@ max.spring.weekdays.evenings <- max(spring.weekdays.evenings$Global_active_power
 min.spring.weekdays.nights <- min(spring.weekdays.nights$Global_active_power, na.rm=T)
 max.spring.weekdays.nights <- max(spring.weekdays.nights$Global_active_power, na.rm=T)
 
-#spring.weekends
+# spring.weekends
 min.spring.weekends.afternoons <- min(spring.weekends.afternoons$Global_active_power, na.rm=T)
 max.spring.weekends.afternoons <- max(spring.weekends.afternoons$Global_active_power, na.rm=T)
 
@@ -73,7 +60,7 @@ max.spring.weekends.evenings <- max(spring.weekends.evenings$Global_active_power
 min.spring.weekends.nights <- min(spring.weekends.nights$Global_active_power, na.rm=T)
 max.spring.weekends.nights <- max(spring.weekends.nights$Global_active_power, na.rm=T)
 
-#summer.weekdays
+# summer.weekdays
 min.summer.weekdays.afternoons <- min(summer.weekdays.afternoons$Global_active_power, na.rm=T)
 max.summer.weekdays.afternoons <- max(summer.weekdays.afternoons$Global_active_power, na.rm=T)
 
@@ -86,7 +73,7 @@ max.summer.weekdays.evenings <- max(summer.weekdays.evenings$Global_active_power
 min.summer.weekdays.nights <- min(summer.weekdays.nights$Global_active_power, na.rm=T)
 max.summer.weekdays.nights <- max(summer.weekdays.nights$Global_active_power, na.rm=T)
 
-#summer.weekends
+# summer.weekends
 min.summer.weekends.afternoons <- min(summer.weekends.afternoons$Global_active_power, na.rm=T)
 max.summer.weekends.afternoons <- max(summer.weekends.afternoons$Global_active_power, na.rm=T)
 
@@ -99,7 +86,7 @@ max.summer.weekends.evenings <- max(summer.weekends.evenings$Global_active_power
 min.summer.weekends.nights <- min(summer.weekends.nights$Global_active_power, na.rm=T)
 max.summer.weekends.nights <- max(summer.weekends.nights$Global_active_power, na.rm=T)
 
-#winter.weekdays
+# winter.weekdays
 min.winter.weekdays.afternoons <- min(winter.weekdays.afternoons$Global_active_power, na.rm=T)
 max.winter.weekdays.afternoons <- max(winter.weekdays.afternoons$Global_active_power, na.rm=T)
 
@@ -112,7 +99,7 @@ max.winter.weekdays.evenings <- max(winter.weekdays.evenings$Global_active_power
 min.winter.weekdays.nights <- min(winter.weekdays.nights$Global_active_power, na.rm=T)
 max.winter.weekdays.nights <- max(winter.weekdays.nights$Global_active_power, na.rm=T)
 
-#winter.weekends
+# winter.weekends
 min.winter.weekends.afternoons <- min(winter.weekends.afternoons$Global_active_power, na.rm=T)
 max.winter.weekends.afternoons <- max(winter.weekends.afternoons$Global_active_power, na.rm=T)
 
@@ -124,3 +111,5 @@ max.winter.weekends.evenings <- max(winter.weekends.evenings$Global_active_power
 
 min.winter.weekends.nights <- min(winter.weekends.nights$Global_active_power, na.rm=T)
 max.winter.weekends.nights <- max(winter.weekends.nights$Global_active_power, na.rm=T)
+
+##  Test against the data
