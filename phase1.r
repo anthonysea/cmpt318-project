@@ -8,233 +8,59 @@ colSD <- function(data) sapply(data, sd, na.rm=T)
 dNames <- c("Train", "Test 1", "Test 2", "Test 3", "Test 4", "Test 5")
 attrs <-  c("Global_active_power", "Global_reactive_power", "Voltage", "Global_intensity", "Sub_metering_1", "Sub_metering_2", "Sub_metering_3")
 
-fw.weekdays.nights.mean_comparison <- rbind(
-  colMeans(fw.weekdays.nights[,attrs]),
-  colMeans(t1.fw.weekdays.nights[,attrs]),
-  colMeans(t2.fw.weekdays.nights[,attrs]),
-  colMeans(t3.fw.weekdays.nights[,attrs]),
-  colMeans(t4.fw.weekdays.nights[,attrs]),
-  colMeans(t5.fw.weekdays.nights[,attrs])
-  ); rownames(fw.weekdays.nights.mean_comparison) <- dNames; fw.weekdays.nights.mean_comparison
+getMean_SD(fw.weekdays.days, t1.fw.weekdays.days, t2.fw.weekdays.days, t3.fw.weekdays.days, 
+           t4.fw.weekdays.days, t5.fw.weekdays.days, attrs, dNames)
+getMean_SD(fw.weekdays.evenings, t1.fw.weekdays.evenings, t2.fw.weekdays.evenings, t3.fw.weekdays.evenings,
+           t4.fw.weekdays.evenings, t5.fw.weekdays.evenings, attrs, dNames)
+getMean_SD(fw.weekdays.nights, t1.fw.weekdays.nights, t3.fw.weekdays.nights, t4.fw.weekdays.nights,
+           t5.fw.weekdays.nights, attrs, dNames)
 
-fw.weekdays.nights.sd_comparison <- rbind(
-  colSD(fw.weekdays.nights[, attrs]),
-  colSD(t1.fw.weekdays.nights[,attrs]),
-  colSD(t2.fw.weekdays.nights[,attrs]),
-  colSD(t3.fw.weekdays.nights[,attrs]),
-  colSD(t4.fw.weekdays.nights[,attrs]),
-  colSD(t5.fw.weekdays.nights[,attrs])
-); rownames(fw.weekdays.nights.sd_comparison) <- dNames; fw.weekdays.nights.sd_comparison
+getMean_SD(fw.weekends.days, t1.fw.weekends.days, t2.fw.weekends.days, t3.fw.weekends.days,
+           t4.fw.weekends.days, t5.fw.weekends.days, attrs, dNames)
+getMean_SD(fw.weekends.evenings, t1.fw.weekends.evenings, t2.fw.weekends.evenings, t3.fw.weekends.evenings,
+           t4.fw.weekends.evenings, t5.fw.weekends.evenings, attrs, dNames)
+getMean_SD(fw.weekends.nights, t1.fw.weekends.nights, t2.fw.weekends.nights, t3.fw.weekends.nights,
+           t4.fw.weekends.nights, t5.fw.weekends.nights, attrs, dNames)
 
-# Compare Mean value of attributes in the F/W Weekdays Days time window
-fw.weekdays.days.mean_comparison <- rbind(
-  colMeans(fw.weekdays.days[,attrs]),
-  colMeans(t1.fw.weekdays.days[,attrs]),
-  colMeans(t2.fw.weekdays.days[,attrs]),
-  colMeans(t3.fw.weekdays.days[,attrs]),
-  colMeans(t4.fw.weekdays.days[,attrs]),
-  colMeans(t5.fw.weekdays.days[,attrs])
-); rownames(fw.weekdays.days.mean_comparison) <- dNames; fw.weekdays.days.mean_comparison
+getMean_SD(ss.weekdays.days, t1.ss.weekdays.days, t2.ss.weekdays.days, t3.ss.weekdays.days, 
+           t4.ss.weekdays.days, t5.ss.weekdays.days, attrs, dNames)
+getMean_SD(ss.weekdays.evenings, t1.ss.weekdays.evenings, t2.ss.weekdays.evenings, t3.ss.weekdays.evenings,
+           t4.ss.weekdays.evenings, t5.ss.weekdays.evenings, attrs, dNames)
+getMean_SD(ss.weekdays.nights, t1.ss.weekdays.nights, t2.ss.weekdays.nights, t3.ss.weekdays.nights,
+           t4.ss.weekdays.nights, t5.ss.weekdays.nights, attrs, dNames)
 
-# Compare SD value of attributes in the F/W Weekdays Days time window
-fw.weekdays.days.sd_comparison <- rbind(
-  colSD(fw.weekdays.days[, attrs]),
-  colSD(t1.fw.weekdays.days[,attrs]),
-  colSD(t2.fw.weekdays.days[,attrs]),
-  colSD(t3.fw.weekdays.days[,attrs]),
-  colSD(t4.fw.weekdays.days[,attrs]),
-  colSD(t5.fw.weekdays.days[,attrs])
-); rownames(fw.weekdays.days.sd_comparison) <- dNames; fw.weekdays.days.sd_comparison
+getMean_SD(ss.weekends.days, t1.ss.weekends.days, t2.ss.weekends.days, t3.ss.weekends.days,
+           t4.ss.weekends.days, t5.ss.weekends.days, attrs, dNames)
+getMean_SD(ss.weekends.evenings, t1.ss.weekends.evenings, t2.ss.weekends.evenings, t3.ss.weekends.evenings, t4.ss.weekends.evenings,
+           t5.ss.weekends.evenings, attrs, dNames)
+getMean_SD(ss.weekends.nights, t1.ss.weekends.nights, t2.ss.weekends.nights, t3.ss.weekends.nights, t4.ss.weekends.nights,
+           t5.ss.weekends.nights, attrs, dNames)
 
 
 
-fw.weekdays.evenings.mean_comparison <- rbind(
-  colMeans(fw.weekdays.evenings[,attrs]),
-  colMeans(t1.fw.weekdays.evenings[,attrs]),
-  colMeans(t2.fw.weekdays.evenings[,attrs]),
-  colMeans(t3.fw.weekdays.evenings[,attrs]),
-  colMeans(t4.fw.weekdays.evenings[,attrs]),
-  colMeans(t5.fw.weekdays.evenings[,attrs])
-); rownames(fw.weekdays.evenings.mean_comparison) <- dNames; fw.weekdays.evenings.mean_comparison
-
-fw.weekdays.evenings.sd_comparison <- rbind(
-  colSD(fw.weekdays.evenings[,attrs]),
-  colSD(t1.fw.weekdays.evenings[,attrs]),
-  colSD(t2.fw.weekdays.evenings[,attrs]),
-  colSD(t3.fw.weekdays.evenings[,attrs]),
-  colSD(t4.fw.weekdays.evenings[,attrs]),
-  colSD(t5.fw.weekdays.evenings[,attrs])
-); rownames(fw.weekdays.evenings.sd_comparison) <- dNames; fw.weekdays.evenings.sd_comparison
-
-
-fw.weekends.nights.mean_comparison <- rbind(
-  colMeans(fw.weekends.nights[, attrs]),
-  colMeans(t1.fw.weekends.nights[, attrs]),
-  colMeans(t2.fw.weekends.nights[, attrs]),
-  colMeans(t3.fw.weekends.nights[, attrs]),
-  colMeans(t4.fw.weekends.nights[, attrs]),
-  colMeans(t5.fw.weekends.nights[, attrs])
-); rownames(fw.weekends.nights.mean_comparison) <- dNames; fw.weekends.nights.mean_comparison
-
-fw.weekends.nights.sd_comparison <- rbind(
-  colSD(fw.weekends.nights[, attrs]),
-  colSD(t1.fw.weekends.nights[, attrs]),
-  colSD(t2.fw.weekends.nights[, attrs]),
-  colSD(t3.fw.weekends.nights[, attrs]),
-  colSD(t4.fw.weekends.nights[, attrs]),
-  colSD(t5.fw.weekends.nights[, attrs])
-); rownames(fw.weekends.nights.sd_comparison) <- dNames; fw.weekends.nights.sd_comparison
-
-fw.weekends.days.mean_comparison <- rbind(
-  colMeans(fw.weekends.days[, attrs]), 
-  colMeans(t1.fw.weekends.days[, attrs]), 
-  colMeans(t2.fw.weekends.days[, attrs]), 
-  colMeans(t3.fw.weekends.days[, attrs]), 
-  colMeans(t4.fw.weekends.days[, attrs]), 
-  colMeans(t5.fw.weekends.days[, attrs])
-); rownames(fw.weekends.days.mean_comparison) <- dNames; fw.weekends.days.mean_comparison
-
-
-fw.weekends.days.sd_comparison <- rbind(
-  colSD(fw.weekends.days[, attrs]),
-  colSD(t1.fw.weekends.days[, attrs]),
-  colSD(t2.fw.weekends.days[, attrs]),
-  colSD(t3.fw.weekends.days[, attrs]),
-  colSD(t4.fw.weekends.days[, attrs]),
-  colSD(t5.fw.weekends.days[, attrs])
-); rownames(fw.weekends.days.sd_comparison) <- dNames; fw.weekends.days.sd_comparison
-
-
-fw.weekends.evenings.mean_comparison <- rbind(
-  colMeans(fw.weekends.evenings[, attrs]), 
-  colMeans(t1.fw.weekends.evenings[, attrs]), 
-  colMeans(t2.fw.weekends.evenings[, attrs]), 
-  colMeans(t3.fw.weekends.evenings[, attrs]), 
-  colMeans(t4.fw.weekends.evenings[, attrs]), 
-  colMeans(t5.fw.weekends.evenings[, attrs])
-); rownames(fw.weekends.evenings.mean_comparison) <- dNames; fw.weekends.days.mean_comparison
-
-
-fw.weekends.evenings.sd_comparison <- rbind(
-  colSD(fw.weekends.evenings[, attrs]),
-  colSD(t1.fw.weekends.evenings[, attrs]),
-  colSD(t2.fw.weekends.evenings[, attrs]),
-  colSD(t3.fw.weekends.evenings[, attrs]),
-  colSD(t4.fw.weekends.evenings[, attrs]),
-  colSD(t5.fw.weekends.evenings[, attrs])
-); rownames(fw.weekends.evenings.sd_comparison) <- dNames; fw.weekends.evenings.sd_comparison
-
-
-### Spring/Summer
-ss.weekdays.evenings.mean_comparison <- rbind(
-  colMeans(ss.weekends.evenings[, attrs]), 
-  colMeans(t1.ss.weekdays.evenings[, attrs]), 
-  colMeans(t2.ss.weekdays.evenings[, attrs]), 
-  colMeans(t3.ss.weekdays.evenings[, attrs]), 
-  colMeans(t4.ss.weekdays.evenings[, attrs]), 
-  colMeans(t5.ss.weekdays.evenings[, attrs])
-); rownames(ss.weekdays.evenings.mean_comparison) <- dNames; ss.weekdays.evenings.mean_comparison
-
-ss.weekdays.evenings.sd_comparison <- rbind(
-  colSD(ss.weekends.evenings[, attrs]), 
-  colSD(t1.ss.weekdays.evenings[, attrs]), 
-  colSD(t2.ss.weekdays.evenings[, attrs]), 
-  colSD(t3.ss.weekdays.evenings[, attrs]), 
-  colSD(t4.ss.weekdays.evenings[, attrs]), 
-  colSD(t5.ss.weekdays.evenings[, attrs])
-); rownames(ss.weekdays.evenings.sd_comparison) <- dNames; ss.weekdays.evenings.sd_comparison
-
-
-ss.weekdays.nights.mean_comparison <- rbind(
-  colMeans(ss.weekdays.nights[, attrs]), 
-  colMeans(t1.ss.weekdays.nights[, attrs]), 
-  colMeans(t2.ss.weekdays.nights[, attrs]), 
-  colMeans(t3.ss.weekdays.nights[, attrs]), 
-  colMeans(t4.ss.weekdays.nights[, attrs]), 
-  colMeans(t5.ss.weekdays.nights[, attrs])
-); rownames(ss.weekdays.nights.mean_comparison) <- dNames; ss.weekdays.nights.mean_comparison
-
-ss.weekdays.nights.sd_comparison <- rbind(
-  colSD(ss.weekdays.nights[, attrs]), 
-  colSD(t1.ss.weekdays.nights[, attrs]), 
-  colSD(t2.ss.weekdays.nights[, attrs]), 
-  colSD(t3.ss.weekdays.nights[, attrs]), 
-  colSD(t4.ss.weekdays.nights[, attrs]), 
-  colSD(t5.ss.weekdays.nights[, attrs])
-); rownames(ss.weekdays.nights.sd_comparison) <- dNames; ss.weekdays.nights.sd_comparison
-
-
-ss.weekdays.days.mean_comparison <- rbind(
-  colMeans(ss.weekdays.days[, attrs]), 
-  colMeans(t1.ss.weekdays.days[, attrs]), 
-  colMeans(t2.ss.weekdays.days[, attrs]), 
-  colMeans(t3.ss.weekdays.days[, attrs]), 
-  colMeans(t4.ss.weekdays.days[, attrs]), 
-  colMeans(t5.ss.weekdays.days[, attrs])
-); rownames(ss.weekdays.days.mean_comparison) <- dNames; ss.weekdays.days.mean_comparison 
-
-ss.weekdays.days.sd_comparison <- rbind(
-  colSD(ss.weekdays.days[, attrs]), 
-  colSD(t1.ss.weekdays.days[, attrs]), 
-  colSD(t2.ss.weekdays.days[, attrs]), 
-  colSD(t3.ss.weekdays.days[, attrs]), 
-  colSD(t4.ss.weekdays.days[, attrs]), 
-  colSD(t5.ss.weekdays.days[, attrs])
-); rownames(ss.weekdays.days.sd_comparison) <- dNames; ss.weekdays.days.sd_comparison 
-
-
-ss.weekends.nights.mean_comparison <- rbind(
-  colMeans(ss.weekends.nights[, attrs]),
-  colMeans(t1.ss.weekends.nights[, attrs]),
-  colMeans(t2.ss.weekends.nights[, attrs]),
-  colMeans(t3.ss.weekends.nights[, attrs]),
-  colMeans(t4.ss.weekends.nights[, attrs]),
-  colMeans(t5.ss.weekends.nights[, attrs])
-); rownames(ss.weekends.nights.mean_comparison) <- dNames; ss.weekends.nights.mean_comparison
-
-ss.weekends.nights.sd_comparison <- rbind(
-  colSD(ss.weekends.nights[, attrs]),
-  colSD(t1.ss.weekends.nights[, attrs]),
-  colSD(t2.ss.weekends.nights[, attrs]),
-  colSD(t3.ss.weekends.nights[, attrs]),
-  colSD(t4.ss.weekends.nights[, attrs]),
-  colSD(t5.ss.weekends.nights[, attrs])
-); rownames(ss.weekends.nights.sd_comparison) <- dNames; ss.weekends.nights.sd_comparison
-
-
-ss.weekends.days.mean_comparison <- rbind(
-  colMeans(ss.weekends.days[, attrs]),
-  colMeans(t1.ss.weekends.days[, attrs]),
-  colMeans(t2.ss.weekends.days[, attrs]),
-  colMeans(t3.ss.weekends.days[, attrs]),
-  colMeans(t4.ss.weekends.days[, attrs]),
-  colMeans(t5.ss.weekends.days[, attrs])
-); rownames(ss.weekends.days.mean_comparison) <- dNames; ss.weekends.days.mean_comparison
-
-ss.weekends.days.sd_comparison <- rbind(
-  colSD(ss.weekends.days[, attrs]),
-  colSD(t1.ss.weekends.days[, attrs]),
-  colSD(t2.ss.weekends.days[, attrs]),
-  colSD(t3.ss.weekends.days[, attrs]),
-  colSD(t4.ss.weekends.days[, attrs]),
-  colSD(t5.ss.weekends.days[, attrs])
-); rownames(ss.weekends.days.sd_comparison) <- dNames; ss.weekends.days.sd_comparison
-
-
-ss.weekends.evenings.mean_comparison <- rbind(
-  colMeans(ss.weekends.evenings[, attrs]),
-  colMeans(t1.ss.weekends.evenings[, attrs]),
-  colMeans(t2.ss.weekends.evenings[, attrs]),
-  colMeans(t3.ss.weekends.evenings[, attrs]),
-  colMeans(t4.ss.weekends.evenings[, attrs]),
-  colMeans(t5.ss.weekends.evenings[, attrs])
-); rownames(ss.weekends.evenings.mean_comparison) <- dNames; ss.weekends.evenings.mean_comparison
-
-ss.weekends.evenings.sd_comparison <- rbind(
-  colSD(ss.weekends.evenings[, attrs]),
-  colSD(t1.ss.weekends.evenings[, attrs]),
-  colSD(t2.ss.weekends.evenings[, attrs]),
-  colSD(t3.ss.weekends.evenings[, attrs]),
-  colSD(t4.ss.weekends.evenings[, attrs]),
-  colSD(t5.ss.weekends.evenings[, attrs])
-); rownames(ss.weekends.evenings.sd_comparison) <- dNames; ss.weekends.evenings.sd_comparison
+getMean_SD <- function(tr, sub1, sub2, sub3, sub4, sub5, attrs, dNames) {
+  cat("Mean and Standard Deviation of ", deparse(substitute(tr)), "\n")
+  meanTab <- rbind(
+    colMeans(tr[, attrs]),
+    colMeans(sub1[, attrs]),
+    colMeans(sub2[, attrs]),
+    colMeans(sub3[, attrs]),
+    colMeans(sub4[, attrs]),
+    colMeans(sub5[, attrs])
+  ); 
+  rownames(meanTab) <- dNames
+  print("Mean")
+  print(meanTab)
+  
+  sdTab <- rbind(
+    colSD(tr[, attrs]),
+    colSD(sub1[, attrs]),
+    colSD(sub2[, attrs]),
+    colSD(sub3[, attrs]),
+    colSD(sub4[, attrs]),
+    colSD(sub5[, attrs])
+  ); 
+  rownames(sdTab) <- dNames
+  print("Standard Deviation")
+  print(sdTab)
+}
