@@ -1,8 +1,8 @@
-test1 <- read.csv("./test1.txt")
-test2 <- read.csv("./test2.txt")
-test3 <- read.csv("./test3.txt")
-test4 <- read.csv("./test4.txt")
-test5 <- read.csv("./test5.txt")
+test1 <- read.csv("test1.txt")
+test2 <- read.csv("test2.txt")
+test3 <- read.csv("test3.txt")
+test4 <- read.csv("test4.txt")
+test5 <- read.csv("test5.txt")
 
 test1$Date <- as.Date(test1$Date, "%d/%m/%Y")
 test2$Date <- as.Date(test2$Date, "%d/%m/%Y")
@@ -25,7 +25,7 @@ test4 <- test4[rowSums(is.na(test4)) == 0,]
 test5 <- test5[rowSums(is.na(test5)) == 0,]
 
 t1.fw <- subset(test1, month(test1$Date) %in% c(9, 10, 11, 12, 1, 2))
-t1.ss <- subset(test1, month(test1$Date) %in% c(3, 4, 5, 6, 7, 8, 9))
+t1.ss <- subset(test1, month(test1$Date) %in% c(3, 4, 5, 6, 7, 8))
 t1.fw.weekdays <- subset(t1.fw, t1.fw$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"))
 t1.fw.weekends <- subset(t1.fw, t1.fw$Day_of_week %in% c("Saturday", "Sunday"))
 t1.ss.weekdays <- subset(t1.ss, t1.ss$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"))
@@ -49,7 +49,7 @@ t1.ss.weekends.evenings <- t1.ss.weekends[hour(hms(t1.ss.weekends$Time)) >= 17 &
 
 
 t2.fw <- subset(test2, month(test2$Date) %in% c(9, 10, 11, 12, 1, 2))
-t2.ss <- subset(test2, month(test2$Date) %in% c(3, 4, 5, 6, 7, 8, 9))
+t2.ss <- subset(test2, month(test2$Date) %in% c(3, 4, 5, 6, 7, 8))
 t2.fw.weekdays <- subset(t2.fw, t2.fw$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"))
 t2.fw.weekends <- subset(t2.fw, t2.fw$Day_of_week %in% c("Saturday", "Sunday"))
 t2.ss.weekdays <- subset(t2.ss, t2.ss$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"))
@@ -73,7 +73,7 @@ t2.ss.weekends.evenings <- t2.ss.weekends[hour(hms(t2.ss.weekends$Time)) >= 17 &
 
 
 t3.fw <- subset(test3, month(test3$Date) %in% c(9, 10, 11, 12, 1, 2))
-t3.ss <- subset(test3, month(test3$Date) %in% c(3, 4, 5, 6, 7, 8, 9))
+t3.ss <- subset(test3, month(test3$Date) %in% c(3, 4, 5, 6, 7, 8))
 t3.fw.weekdays <- subset(t3.fw, t3.fw$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"))
 t3.fw.weekends <- subset(t3.fw, t3.fw$Day_of_week %in% c("Saturday", "Sunday"))
 t3.ss.weekdays <- subset(t3.ss, t3.ss$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"))
@@ -97,7 +97,7 @@ t3.ss.weekends.evenings <- t3.ss.weekends[hour(hms(t3.ss.weekends$Time)) >= 17 &
 
 
 t4.fw <- subset(test4, month(test4$Date) %in% c(9, 10, 11, 12, 1, 2))
-t4.ss <- subset(test4, month(test4$Date) %in% c(3, 4, 5, 6, 7, 8, 9))
+t4.ss <- subset(test4, month(test4$Date) %in% c(3, 4, 5, 6, 7, 8))
 t4.fw.weekdays <- subset(t4.fw, t4.fw$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"))
 t4.fw.weekends <- subset(t4.fw, t4.fw$Day_of_week %in% c("Saturday", "Sunday"))
 t4.ss.weekdays <- subset(t4.ss, t4.ss$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"))
@@ -121,7 +121,7 @@ t4.ss.weekends.evenings <- t4.ss.weekends[hour(hms(t4.ss.weekends$Time)) >= 17 &
 
 
 t5.fw <- subset(test5, month(test5$Date) %in% c(9, 10, 11, 12, 1, 2))
-t5.ss <- subset(test5, month(test5$Date) %in% c(3, 4, 5, 6, 7, 8, 9))
+t5.ss <- subset(test5, month(test5$Date) %in% c(3, 4, 5, 6, 7, 8))
 t5.fw.weekdays <- subset(t5.fw, t5.fw$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"))
 t5.fw.weekends <- subset(t5.fw, t5.fw$Day_of_week %in% c("Saturday", "Sunday"))
 t5.ss.weekdays <- subset(t5.ss, t5.ss$Day_of_week %in% c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"))
