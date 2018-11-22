@@ -1,4 +1,5 @@
 ## Phase 1 (II) - Linear Regression
+library(DAAG)
 corMtx <- rbind(
   cor(fw$Global_active_power, fw$Global_intensity),
   cor(fw$Global_active_power, fw$Voltage),
@@ -25,9 +26,8 @@ print(mean(abs((actuals_preds$predicted - actuals_preds$actuals)) / actuals_pred
 
 ggplot() +
   geom_line(data = fw, aes(Global_intensity, Global_active_power), colour='black', size=1) 
-  geom_line(data = actuals_predssumm, aes(actuals, pred), colour='red', size=1)  
-
-library(DAAG)
+  geom_line(data = actuals_preds, aes(actuals, pred), colour='red', size=1)  
+  
 cvResults <- suppressWarnings(CVlm(fw, form.lm=Global_active_power ~ Global_intensity, m=5, dots=F, seed=1,
                                    legend.pos='topleft', printit=F))
 attr(cvResults, 'ms')
