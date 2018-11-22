@@ -10,7 +10,9 @@ mod.fw.weekdays.evenings <- depmix(response = Global_active_power ~ 1,
                                  ntimes = rep(420 , 378))
 
 mod.fw.weekdays.nights <- depmix(response = Global_active_power ~ 1, 
-                                 data = fw.weekday.nights,
+                                 data = fw.weekdays.nights,
                                  nstates = 19,
                                  ntimes = rep(480, 379))
+
+fit(mod.fw.weekday.days)
 
