@@ -1,8 +1,8 @@
-test1 <- read.csv("./test1.txt")
-test2 <- read.csv("./test2.txt")
-test3 <- read.csv("./test3.txt")
-test4 <- read.csv("./test4.txt")
-test5 <- read.csv("./test5.txt")
+test1 <- read.csv("test1.txt")
+test2 <- read.csv("test2.txt")
+test3 <- read.csv("test3.txt")
+test4 <- read.csv("test4.txt")
+test5 <- read.csv("test5.txt")
 
 test1$Date <- as.Date(test1$Date, "%d/%m/%Y")
 test2$Date <- as.Date(test2$Date, "%d/%m/%Y")
