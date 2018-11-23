@@ -23,10 +23,19 @@ cor(t1.fw$Global_active_power, lmPred.t1.fw)
 print(mean(apply(actuals_preds, 1, min) / apply(actuals_preds, 1, max))) 
 # Mean absolute percentage error - lower the better
 print(mean(abs((actuals_preds$predicted - actuals_preds$actuals)) / actuals_preds$actuals))
-
+"
 ggplot() +
-  geom_line(data = fw, aes(Global_intensity, Global_active_power), colour='black', size=1) 
-  geom_line(data = actuals_preds, aes(actuals, pred), colour='red', size=1)  
+  geom_point(data = fw, aes(Global_intensity, Global_active_power), colour='black', size=1) +
+  geom_line(data = actuals_preds, aes(actuals, lmPred.t1.fw), colour='red', size=1) 
+"
+ggplot(data=t1.fw) +
+  geom_point(data = t1.fw, aes(t1.fw$Global_intensity, t1.fw$Global_active_power), colour='red', size=1)
+  geom_line(data = actuals_preds, aes(t1.fw$Global_intensity, actuals_preds$predicted), colour='blue', size=1)
+
+
+
+plot(x=fw$Global_intensity, y=fw$Global_active_power, pch=16, col='blue')
+abline()
   
 cvResults <- suppressWarnings(CVlm(fw, form.lm=Global_active_power ~ Global_intensity, m=5, dots=F, seed=1,
                                    legend.pos='topleft', printit=F))
