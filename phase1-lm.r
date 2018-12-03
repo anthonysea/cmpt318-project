@@ -1,9 +1,10 @@
 ## Phase 1 (II) - Linear Regression
 library(DAAG)
+fwP1 <- naMeanFill(fw)
 corMtx <- rbind(
-  cor(fw$Global_active_power, fw$Global_intensity),
-  cor(fw$Global_active_power, fw$Voltage),
-  cor(fw$Global_active_power, fw$Global_reactive_power)
+  cor(fw$Global_active_power, fw$Global_intensity, use='complete.obs'),
+  cor(fw$Global_active_power, fw$Voltage, use='complete.obs'),
+  cor(fw$Global_active_power, fw$Global_reactive_power, use='complete.obs')
 )
 rownames(corMtx) <- c("Global intensity", "Voltage", "Global reactive power")
 colnames(corMtx) <- c("Global active power")
@@ -28,14 +29,16 @@ ggplot() +
   geom_point(data = fw, aes(Global_intensity, Global_active_power), colour='black', size=1) +
   geom_line(data = actuals_preds, aes(actuals, lmPred.t1.fw), colour='red', size=1) 
 "
+# Plot of the actual test data of Global intensity vs Global_active_power and the linear regression model prediction line
 ggplot(data=t1.fw) +
-  geom_point(data = t1.fw, aes(t1.fw$Global_intensity, t1.fw$Global_active_power), colour='red', size=1)
-  geom_line(data = actuals_preds, aes(t1.fw$Global_intensity, actuals_preds$predicted), colour='blue', size=1)
+  geom_point(data = t1.fw, aes(t1.fw$Global_intensity, t1.fw$Global_active_power), colour='black', size=1) +
+  geom_line(data = actuals_preds, aes(t1.fw$Global_intensity, actuals_preds$predicted), colour='green', size=1)
 
 
 
+# Plot of the training data and the created linear model
 plot(x=fw$Global_intensity, y=fw$Global_active_power, pch=16, col='blue')
-abline()
+abline(lm.fw)
   
 cvResults <- suppressWarnings(CVlm(fw, form.lm=Global_active_power ~ Global_intensity, m=5, dots=F, seed=1,
                                    legend.pos='topleft', printit=F))
