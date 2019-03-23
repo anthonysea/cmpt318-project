@@ -1,10 +1,7 @@
 # cmpt318-project
 
-This application is written in R. This R program takes a large data set (years) of power consumption in an area and analyzes for any anomilies
-within the time period specified. 
+This R program takes a large data set (years) of power consumption in an area and analyzes for any anomalies within the time period specified. 
 
-It is able to find complex anomalies as well as point anomalies and graph them (coloured) in order for better visibilty. It will summerize 
-the results into time fames of Weekends/weekdays and all 4 seasons through out a year. 
+The program can detect complex and point anomalies in data sets and display them on a coloured graph. The results are separated into time frames of weekends and weekdays from each season of the year. 
 
-Seasons are seperated into 2 (Winter and Fall / Summer and Spring) Spring and Fall dont have enough significant of an impact for them 
-to be alone, so the seasons were combined.
+Seasons are seperated into 2 categories (Winter and Fall / Summer and Spring). The power consumption in Spring and Fall are quite similar to Summer and Winter, so the seasons were combined.
